@@ -3,50 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css">
     <title>Juego de Memoria</title>
   </head>
   <body>
     <header>
-      <h1>Buscar Parejas --ADRIÁN CASTRO BEIRO--</h1>
+      <h1 id="tittle">Buscar Parejas --ADRIÁN CASTRO BEIRO--</h1>
     </header>
 
-    <section>
+    <section id="panel">
       <!-- esto es el menu de la izquierda -->
-      <article>
-        <h3>Numero Intentos</h3>
-        <span></span>
-        <h3>Numero de parejas restantes</h3>
-        <span></span>
+      <article id="prueba">
+        <h3 id="intentos">Numero Intentos</h3>
+        <span id="msg"></span>
+        <h3 id="numRest">Numero de parejas restantes</h3>
+        <span id="restante"></span>
       </article>
 
-      <article></article>
+      <article id="panelJuego"></article>
 
-      <article>
+      <article id="articleForm">
+        <h3 id="dificultad">Dificultades</h3>
         <form>
           <div>
-            <label for="facil"><input type="radio" name="facil" id="facil" />Facil</label>
+            <label id="easy" for="facil"><input type="radio" name="facil" id="facil" />Facil</label>
           </div>
           <div>
-            <label for="medio"><input type="radio" name="medio" id="medio"/>Medio</label>
+            <label id="medium" for="medio"><input type="radio" name="medio" id="medio"/>Medio</label>
           </div>
           <div>
-            <label for="dificil"> <input type="radio" name="dificill" id="dificil" />Dificil</label>
+            <label id="hard" for="dificil"> <input type="radio" name="dificil" id="dificil" />Dificil</label>
           </div>
           <div>
             
-            <label for="personalizado"><input type="radio" name="personalizado" id="personalizado" />personalizado</label>
+            <label id="perso" for="personalizado"><input type="radio" name="personalizado" id="personalizado" />Personalizado</label>
           </div>
           <div>
-            <label for="filas">Filas</label>
+            <label for="filas" id="fila" >Filas</label>
             <input type="text" name="filas" id="filas">
-            <label for="columnas">Columnas</label>
+            <label for="columnas" id="columna" >Columnas</label>
             <input type="text" name="columnas" id="columnas">
             <br>
-            <input type="submit" name="" value="submit">
-            <p></p>
+            <input type="submit" name="enviar" value="Enviar" id="enviar">
+            <p id="error"></p>
           </div>
         </form>
       </article>
     </section>
+    <div>
+      <h4 id="confirm"></h4>
+  </div>
   </body>
 </html>
