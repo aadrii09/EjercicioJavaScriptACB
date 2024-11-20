@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Juego de Memoria</title>
   </head>
-  <body>
+  <body onLoad="iniciarJuego()">
     <header>
       <h1 id="tittle">Buscar Parejas --ADRIÁN CASTRO BEIRO--</h1>
     </header>
@@ -15,28 +15,28 @@
       <!-- esto es el menu de la izquierda -->
       <article id="prueba">
         <h3 id="intentos">Numero Intentos</h3>
-        <span id="msg"></span>
+        <span id="numIntento"></span>
         <h3 id="numRest">Numero de parejas restantes</h3>
-        <span id="restante"></span>
+        <span id="numRestante"></span>
       </article>
 
       <article id="panelJuego"></article>
 
       <article id="articleForm">
-        <h3 id="dificultad">Dificultades</h3>
+        <h2 id="dificultad">Dificultades</h2>
         <form>
           <div>
-            <label id="easy" for="facil"><input type="radio" name="facil" id="facil" />Facil</label>
+            <label id="easy" for="facil"><input type="radio" name="boton" id="facil" />Facil</label>
           </div>
           <div>
-            <label id="medium" for="medio"><input type="radio" name="medio" id="medio"/>Medio</label>
+            <label id="medium" for="medio"><input type="radio" name="boton" id="medio"/>Medio</label>
           </div>
           <div>
-            <label id="hard" for="dificil"> <input type="radio" name="dificil" id="dificil" />Dificil</label>
+            <label id="hard" for="dificil"> <input type="radio" name="boton" id="dificil" />Dificil</label>
           </div>
           <div>
             
-            <label id="perso" for="personalizado"><input type="radio" name="personalizado" id="personalizado" />Personalizado</label>
+            <label id="perso" for="personalizado"><input type="radio" name="boton" id="personalizado" />Personalizado</label>
           </div>
           <div>
             <label for="filas" id="fila" >Filas</label>
@@ -54,4 +54,5 @@
       <h4 id="confirm"></h4>
   </div>
   </body>
+  <script src="../javaScript/index.js"></script>
 </html>

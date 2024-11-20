@@ -1,7 +1,7 @@
 body{
     display: flex;
     flex-direction: column;
-    background-image: url('../imagenes/fondo-blanco-gris-patron-lineas-diagonales_1017-25100.avif'); 
+    background-image: url('../imagenes/fondo.avif'); 
     background-size: cover; 
     
 }
@@ -107,18 +107,35 @@ input[type="submit"]{
     background-color: rgb(196, 194, 194);
 }
 
-input[name="facil"] {
+input[id="facil"] {
     accent-color: green; 
   }
 
-  input[name="medio"] {
+  input[id="medio"] {
     accent-color: rgb(3, 3, 206); 
   }
 
-  input[name="dificil"] {
+  input[id="dificil"] {
     accent-color: rgb(186, 3, 3); 
   }
 
-  input[name="personalizado"] {
+  input[id="personalizado"] {
     accent-color: rgb(84, 1, 162) ;
   }
+
+/* esto esta en js */
+  table{
+    width: 100%;
+    border-spacing: 15px;
+
+}
+
+td{
+    border: 3px solid rgb(238, 0, 255);
+    height: 100px;
+    background-color: rgb(0, 255, 247);
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    color: aliceblue;
+}
