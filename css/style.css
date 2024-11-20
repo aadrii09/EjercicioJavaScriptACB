@@ -1,3 +1,7 @@
+*{
+    cursor: url('../imagenes/Master\ Sword.cur'), auto;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -102,6 +106,7 @@ input[type="submit"]{
 
 #enviar{
     border-radius: 15px;
+  
 }
 #enviar:hover{
     background-color: rgb(196, 194, 194);
