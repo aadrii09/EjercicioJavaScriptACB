@@ -26,20 +26,20 @@
         <h2 id="dificultad">Dificultades</h2>
         <form>
           <div>
-            <label id="easy" for="facil"><input type="radio" name="boton" id="facil" />Facil</label>
+            <label id="easy" for="facil"><input type="radio" name="boton" id="facil" onclick="dificultades('facil')" />Facil</label>
           </div>
           <div>
-            <label id="medium" for="medio"><input type="radio" name="boton" id="medio"/>Medio</label>
+            <label id="medium" for="medio"><input type="radio" name="boton" id="medio"onclick="dificultades('medio')"/>Medio</label>
           </div>
           <div>
-            <label id="hard" for="dificil"> <input type="radio" name="boton" id="dificil" />Dificil</label>
+            <label id="hard" for="dificil"> <input type="radio" name="boton" id="dificil" onclick="dificultades('dificil')" />Dificil</label>
           </div>
           <div>
             
-            <label id="perso" for="personalizado"><input type="radio" name="boton" id="personalizado" />Personalizado</label>
+            <label id="perso" for="personalizado"><input type="radio" name="boton" id="personalizado" onclick="dificultades('perso')"/>Personalizado</label>
           </div>
           <div>
-            <label for="filas" id="fila" >Filas</label>
+            <label for="filas" id="fila">Filas</label>
             <input type="text" name="filas" id="filas">
             <label for="columnas" id="columna" >Columnas</label>
             <input type="text" name="columnas" id="columnas">
@@ -54,5 +54,6 @@
       <h4 id="confirm"></h4>
   </div>
   </body>
-  <script src="../javaScript/index.js"></script>
+  <script src="../javaScript/index.js" defer></script>
+
 </html>

@@ -71,94 +71,76 @@ function iniciarJuego(){
         error.innerHTML = "";
     },1000)
     }
-
-
-    // function dificultades(dificultad){
-
-    //     if(dificultad == "facil"){
-    //         document.getElementById("filas").value = 3;
-    //         document.getElementById("columnas").value = 4;
-    //     }else if(dificultad == "medio"){
-    //         document.getElementById("filas").value = 5;
-    //         console.log (dificultad);
-    //         document.getElementById("columnas").value = 6;
-    //     }else if(dificultad == "dificil"){
-    //         document.getElementById("filas").value = 10;
-    //         document.getElementById("columnas").value = 10;
-    //     }else if(dificultad == "perso"){
-    //         document.getElementById("filas").value;
-    //         document.getElementById("columnas").value;
-    //     }
-    // }
-    function dificultad(x) {
-        if (x == 1) {
-          //FACIL
-          document.getElementById("filas").disabled = true;
-          document.getElementById("columnas").disabled = true;
-    
-          document.getElementById("filas").value = 3;
-          document.getElementById("columnas").value = 4;
-    
-          console.log(document.getElementById("filas").value);
-        } else if (x == 2) {
-          //MEDIO
-          document.getElementById("filas").disabled = true;
-          document.getElementById("columnas").disabled = true;
-    
-          document.getElementById("filas").value = 5;
-          document.getElementById("columnas").value = 6;
-        } else if (x == 3) {
-          //DIFICIL
-          document.getElementById("filas").disabled = true;
-          document.getElementById("columnas").disabled = true;
-    
-          document.getElementById("filas").value = 10;
-          document.getElementById("columnas").value = 10;
-        } else {
-          //PERSONALIZADO
-          document.getElementById("filas").disabled = false; //habilito
-          document.getElementById("columnas").disabled = false;
-    
-          document.getElementById("filas").value;
-          document.getElementById("columnas").value;
-        }
-      }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+    function dificultades(dificultad) {
+        
+        if (dificultad == "facil") {
+            document.getElementById("filas").value = 3;
+            document.getElementById("columnas").value = 4;
+
+            document.getElementById("filas").disabled=true
+            document.getElementById("columnas").disabled=true
+        } else if (dificultad == "medio") {
+            document.getElementById("filas").value = 5;
+            document.getElementById("columnas").value = 6;
+
+            document.getElementById("filas").disabled=true
+            document.getElementById("columnas").disabled=true
+        } else if (dificultad == "dificil") {
+            document.getElementById("filas").value = 10;
+            document.getElementById("columnas").value = 10;
+
+            document.getElementById("filas").disabled=true
+            document.getElementById("columnas").disabled=true
+        } else if (dificultad == "perso") {
+            document.getElementById("filas").value;
+            document.getElementById("columnas").value;
+
+            document.getElementById("filas").disabled=false
+            document.getElementById("columnas").disabled=false
+        }
+    }
+
+
+   
+   
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
