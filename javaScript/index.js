@@ -79,33 +79,31 @@ function iniciarJuego(){
             document.getElementById("filas").value = 3;
             document.getElementById("columnas").value = 4;
 
-            document.getElementById("filas").disabled=true
-            document.getElementById("columnas").disabled=true
+            document.getElementById("filas").disabled = true
+            document.getElementById("columnas").disabled = true
         } else if (dificultad == "medio") {
             document.getElementById("filas").value = 5;
             document.getElementById("columnas").value = 6;
 
-            document.getElementById("filas").disabled=true
-            document.getElementById("columnas").disabled=true
+            document.getElementById("filas").disabled = true
+            document.getElementById("columnas").disabled = true
         } else if (dificultad == "dificil") {
             document.getElementById("filas").value = 10;
             document.getElementById("columnas").value = 10;
 
-            document.getElementById("filas").disabled=true
-            document.getElementById("columnas").disabled=true
+            document.getElementById("filas").disabled = true
+            document.getElementById("columnas").disabled = true
         } else if (dificultad == "perso") {
             document.getElementById("filas").value;
             document.getElementById("columnas").value;
 
-            document.getElementById("filas").disabled=false
-            document.getElementById("columnas").disabled=false
+            document.getElementById("filas").disabled = false
+            document.getElementById("columnas").disabled = false
         }
     }
 
-
    
-   
-   
+  
 
 
 
