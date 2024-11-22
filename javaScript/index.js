@@ -101,9 +101,37 @@ function iniciarJuego(){
             document.getElementById("columnas").disabled = false
         }
     }
+    
 
+    function numerosAleatorios(min, max){
+        return Math.floor(Math.random()*max)-min;
+    }
    
-  
+    function generarParejas(valor){
+        let parejas = 0;
+        while(parejas < 2){
+            const fila = numerosAleatorios(0, tabla.rows.length);
+            const columna = numerosAleatorios(0, tabla.rows[0].cells.length);
+
+            if (tabla.rows[fila].cells[columna].getAttribute("num")==null) {
+                tabla.rows[fila].cells[columna].setAttribute("num",valor);
+                parejas++;
+            }
+        }
+    }
+
+    function comprobarGanador(){
+        for (const casilla of casillas_td) {
+            const ganador = casilla.classList.contains("casillaDescubierta");
+            if (ganador == false) {
+                return;
+            }    
+        }
+            if (confirm("has ganado yisus")) {
+                location.reload();
+
+            }
+    }
 
 
 
