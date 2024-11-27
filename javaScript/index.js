@@ -10,6 +10,11 @@ const confirm = document.getElementById("confirm");
 
 const casillas_td = document.getElementsByTagName("td");
 
+let intentos = 0;
+let parejasRestantes;
+let bloquearClick = false;
+let guardarUltimoBotonPulsado;
+
 let numFila = 0;
 let numColumna = 0;
 
@@ -128,13 +133,53 @@ function iniciarJuego(){
             }    
         }
             if (confirm("has ganado yisus")) {
-                location.reload();
-
+                location.reload(); 
             }
     }
 
 
+    function juego(){
 
+        for (let i = 0;i<numFila; i++) {
+           
+            const fila = tabla.rows[i];
+            for (let j = 0;j<fila.cells.length; j++) {
+                const celda = fila.cells[j];
+                
+                celda.addEventListener("click",function (e){
+
+                    if (bloquearClick == false && !celda.classList.contains("botonPulsado")) {
+                        celda.classList.add(botonPulsado);
+                        celda.innerHTML= `<h2>${celda.getAttribute("num")}</h2>`;
+                        numRestante.innerHTML= parejasRestantes;
+                        if(!guardarUltimoBotonPulsado){
+                            guardarUltimoBotonPulsado = celda;
+                        }else if(guardarUltimoBotonPulsado.getAttribute("num")!=celda.getAttribute("num")){
+                            bloquearClick =true;
+                            intentos ++;
+                            numIntento.innerHTML = intentos;
+                            confirm.innerHTML = "los numeros no son iguales";
+                            setTimeout(()=>{
+                                confirm.innerHTML = "";
+                                
+                            })
+                        }
+
+
+
+
+
+
+
+
+
+
+                    }
+                })
+            }
+        }
+
+    }
 
 
 

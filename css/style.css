@@ -144,3 +144,8 @@ td{
     text-align: center;
     color: aliceblue;
 }
+
+.botonPulsado{
+    color: blueviolet;
+    background-color: aqua;
+}
