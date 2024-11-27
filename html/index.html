@@ -26,7 +26,7 @@
         <h2 id="dificultad">Dificultades</h2>
         <form>
           <div>
-            <label id="easy" for="facil"><input type="radio" name="boton" id="facil" onclick="dificultades('facil')" />Facil</label>
+            <label id="easy" for="facil"><input checked type="radio" name="boton" id="facil" onclick="dificultades('facil')" />Facil</label>
           </div>
           <div>
             <label id="medium" for="medio"><input type="radio" name="boton" id="medio"onclick="dificultades('medio')"/>Medio</label>
@@ -40,9 +40,9 @@
           </div>
           <div>
             <label for="filas" id="fila">Filas</label>
-            <input type="text" name="filas" id="filas">
+            <input type="text" name="filas" id="filas" disabled>
             <label for="columnas" id="columna" >Columnas</label>
-            <input type="text" name="columnas" id="columnas">
+            <input type="text" name="columnas" id="columnas" disabled>
             <br>
             <input type="button" name="enviar" value="Enviar" id="enviar" onclick="iniciarJuego()">
             <p id="error"></p>

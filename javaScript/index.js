@@ -27,6 +27,8 @@ window.onload = function(){
     intentos = 0 ;
     conseguirValores();
     crearTabla(3,4)
+
+    juego();
 }
 // let intentos = 0;
 
@@ -70,6 +72,7 @@ function iniciarJuego(){
     console.log("MENSAJE");
     if((valorFila * valorColumna) %2 ==0){
         crearTabla(valorFila, valorColumna);
+        juego();
     }else{
         error.innerHTML = "No se puede crear una tabla cuya multiplicacion de fila y columna sea impar";
     setTimeout(()=>{
@@ -146,12 +149,15 @@ function iniciarJuego(){
             for (let j = 0;j<fila.cells.length; j++) {
                 const celda = fila.cells[j];
                 
+                numIntento.innerHTML=intentos;
+
                 celda.addEventListener("click",function (e){
 
                     if (bloquearClick == false && !celda.classList.contains("botonPulsado")) {
-                        celda.classList.add(botonPulsado);
+                        celda.classList.add("botonPulsado");
                         celda.innerHTML= `<h2>${celda.getAttribute("num")}</h2>`;
                         numRestante.innerHTML= parejasRestantes;
+                        console.log(celda.getAttribute("num"))
                         if(!guardarUltimoBotonPulsado){
                             guardarUltimoBotonPulsado = celda;
                         }else if(guardarUltimoBotonPulsado.getAttribute("num")!=celda.getAttribute("num")){
@@ -161,24 +167,39 @@ function iniciarJuego(){
                             confirm.innerHTML = "los numeros no son iguales";
                             setTimeout(()=>{
                                 confirm.innerHTML = "";
+                                guardarUltimoBotonPulsado.innerHTML = "";
+                                guardarUltimoBotonPulsado.classList.remove("botonPulsado");
+                                guardarUltimoBotonPulsado=undefined;
+                                celda.innerHTML="";
+                                celda.classList.remove("botonPulsado");
+                                bloquearClick= false;
                                 
-                            })
-                        }
+                            },1000)
+                        }else{
+                            intentos++;
+                            guardarUltimoBotonPulsado=undefined;
+                            parejasRestantes--;
+                            numRestante.innerHTML=parejasRestantes;
+                            numIntento.innerHTML=intentos;
+                            confirm.innerHTML= "numero de parejas iguales";
+                            setTimeout(()=>{
+                                confirm.innerHTML="";
+                            },1000)
+                    
+                    }
 
-
-
-
-
-
-
-
-
+                    comprobarGanador();
 
                     }
                 })
             }
         }
-
+        for (let i=0; i<(numFila*numColumna)/2;i++) {
+           generarParejas(i+1);
+           parejasRestantes=i+1;
+            
+        }
+        numRestante.innerHTML= parejasRestantes;
     }
 
 
